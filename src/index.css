@@ -1,0 +1,31 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	scroll-behavior: smooth;
+
+}
+#banner {
+	background-image: url('/assets/human_background.jpg');
+}
+.heroText {
+	  background: -webkit-linear-gradient(#333,#eee );
+	  -webkit-background-clip: text;
+	  -webkit-text-fill-color: transparent;
+
+	}
+	.pulse:hover {
+		transform: scale(1);
+
+	}
+	/*.threed:hover*/
+/*{
+        box-shadow:
+                1px 1px #53a7ea,
+                2px 2px #53a7ea,
+                3px 3px #53a7ea;
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+}*/

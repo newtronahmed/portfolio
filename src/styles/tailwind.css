@@ -1,0 +1,17 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+.raise {
+	@apply cursor-pointer;
+	@apply ease-in-out;
+	@apply delay-150;
+	@apply duration-200;
+}
+.raise:hover {
+	@apply transform;
+	@apply -translate-y-2;
+	@apply shadow-md;
+	
+}
