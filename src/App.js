@@ -1,7 +1,5 @@
 
 import React ,{useEffect}from 'react';
-import Navbar from './components/navbar';
-
 import TwitterIcon from '@material-ui/icons/Twitter';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -33,7 +31,7 @@ const App = () => {
 			title: 'Frontend Mentor Joblisting Challenge',
 			stack: ['react','styled-components', 'bootstrap',],
 			image: frontendMentor,
-			link: 'http://newtrojoblisting.netlfy.app'
+			link: 'http://newtrojoblisting.netlify.app'
 
 		},
 		{
@@ -80,6 +78,7 @@ const App = () => {
 			</div>
 		</div>
 	      	<div className="w-full min-h-screen  bg-fixed bg-cover flex items-center justify-center flex-wrap   " id="banner" style={{alignContent:'center'}}>
+				  <div className='text-white'>Hi, i am</div>
 	     		<div className='w-full flex justify-center'>
 				 <div className='border-2 border-black md:text-2xl  bg-black  lg:bg-transparent text-white px-4 py-1 font-bold tracking-widest'>Ahmed</div>
 				<div className='border-2 border-white md:text-2xl text-white px-4 py-1 font-bold bg-black tracking-widest  '>Zubairu</div>
@@ -153,16 +152,16 @@ const App = () => {
           <section className='p-10'>
           <Section title='Projects Over the Years' svg={portfolioSvg} />
 		  
-          	<div className='container flex justify-evenly flex-wrap  '>
+          	<div className='container flex justify-evenly flex-wrap    '>
 			  {
 			  projects.map(each=>(
-					
-					<a href={each.link} target='_blank' rel='noopener noreferrer' className='block mb-2 w-full lg:w-1/3 wow slideInUp' >
-						<div className='project-wrapper  raise shadow-md relative p-4'>
-						<div className='w-full  mb-2'>
-							<img src={each.image} alt="project" className=' bg-cover bg-center h-32 ' />
-						</div>
-						<div className='h-12'  >
+					<div className='w-full  flex-col md:w-1/3 p-4'>
+					<a href={each.link} target='_blank' rel='noopener noreferrer' className=' wow slideInUp' >
+						<div className='project-wrapper  raise shadow-md p-4'>
+						
+							<img src={each.image} alt="project" className=' w-full h-32 ' />
+						
+						<div className='h-12 lg:h-24'  >
 							<Divider />
 							<div>
 								{each.title}
@@ -177,6 +176,7 @@ const App = () => {
 						</div>
 						
 					 </a>
+					 </div>
           		
 			  ))
 		  }
