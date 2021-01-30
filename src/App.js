@@ -107,8 +107,13 @@ const App = () => {
           		<div className='md:p-16 p-8 '>
           			
           			<div  > 
-					  <div className='m-6 wow slideInRight'>I am a developer Nulla porttitor accumsan tincidunt. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. 
-					  Sed porttitor lectus nibh. Sed porttitor lectus nibh. Curabitur</div> 
+					  <div className='m-6 wow slideInRight'>
+						  My name is Ahmed Zubairu. I am a mid-level professional webdeveloper and a student of the University of Ghana . I am a hardworking , creative , and very honest .
+						   I am very passionate about software development . Infact I am a self-taught web developer and as you may know it takes more than just passion to be a self-taught developer. 
+						   I have hands on experience in building complex react or larvel applictions . 
+						    I also worked in a team of react-native developers in developing the interface of a car-pooling application popularly known as Vielly.  
+						    I free-lance using the skills i have acquired from platforms like Udemy and Freecodecamp. Currently I am learning nodejs and  mongoDB. Lastly , I am open to job opportunities.
+					  </div> 
 					  <div>
 						  <div className='text-xl my-2 font-bold wow slideInLeft'>Experience</div>
 						  <div>
