@@ -7,6 +7,9 @@ html {
 	scroll-behavior: smooth;
 
 }
+.name {
+	font-family: 'Potta One';
+}
 #banner {
 	background-image: url('/assets/human_background.jpg');
 }

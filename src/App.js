@@ -16,6 +16,13 @@ import frontendMentor from './images/frontend.jpg'
 import Section from './components/section'
 import WOW from 'wowjs'
 import { Divider} from '@material-ui/core';
+// import css from './images/css.png';
+import javascript from './images/javascript.png'
+import laravel from './images/laravel.png'
+import react from './images/react.png'
+import mysql from './images/mysql.png'
+import  sass from './images/sass.png'
+import nodejs from './images/nodejs.png'
 
 
 
@@ -25,7 +32,7 @@ const App = () => {
 		    live: false
 		}).init();
 	}, [])
-	
+	const skills = [nodejs,javascript,laravel,react,mysql,sass]
 	const projects = [
 		{
 			title: 'Frontend Mentor Joblisting Challenge',
@@ -78,10 +85,10 @@ const App = () => {
 			</div>
 		</div>
 	      	<div className="w-full min-h-screen  bg-fixed bg-cover flex items-center justify-center flex-wrap   " id="banner" style={{alignContent:'center'}}>
-				  <div className='text-white'>Hi, i am</div>
+				  <div className='text-white name'>Hi, i am</div>
 	     		<div className='w-full flex justify-center'>
-				 <div className='border-2 border-black md:text-2xl  bg-black  lg:bg-transparent text-white px-4 py-1 font-bold tracking-widest'>Ahmed</div>
-				<div className='border-2 border-white md:text-2xl text-white px-4 py-1 font-bold bg-black tracking-widest  '>Zubairu</div>
+				 <div className='border-2 border-black md:text-2xl  bg-black  lg:bg-transparent text-white px-4 py-1 name font-bold tracking-widest'>Ahmed</div>
+				<div className='border-2 border-white md:text-2xl text-white px-4 py-1 font-bold bg-black tracking-widest name '>Zubairu</div>
 				</div>
 				<div className=' text-white p-4 ' >
 					I am a <span className='bg-black md:text-2xl'>Developer</span>
@@ -147,12 +154,22 @@ const App = () => {
 				<div className='md:p-16 xs:p-8'>
 				Coming Soon
 				</div> */}
+								{/* Skills Section */}
+								<div style={{display:'flex',justifyContent:'space-around'}}>
+				{
+					skills.map(each=>{
+						return (<div>
+							<img src={each} className='w-12 h-12' alt='skill'/>
+						</div>)
+					})
+				}
+								</div>
 		
           						{/*Works or Projects Section*/}
           <section className='p-10'>
           <Section title='Projects Over the Years' svg={portfolioSvg} />
 		  
-          	<div className='container flex justify-evenly flex-wrap    '>
+          	<div className='container flex md:justify-evenly flex-wrap    '>
 			  {
 			  projects.map(each=>(
 					<div className='w-full  flex-col md:w-1/3 p-4'>
@@ -161,7 +178,7 @@ const App = () => {
 						
 							<img src={each.image} alt="project" className=' w-full h-32 ' />
 						
-						<div className='h-12 lg:h-24'  >
+						<div className='h-24 lg:h-20'  >
 							<Divider />
 							<div>
 								{each.title}
