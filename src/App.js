@@ -91,7 +91,7 @@ const App = () => {
 				<div className='border-2 border-white md:text-2xl text-white px-4 py-1 font-bold bg-black tracking-widest name '>Zubairu</div>
 				</div>
 				<div className=' text-white p-4 ' >
-					I am a <span className='bg-black md:text-2xl'>Developer</span>
+				 <span className='bg-black md:text-2xl p-2 name'>I am Developer</span>
 				</div>
 				 
 				
@@ -104,25 +104,26 @@ const App = () => {
           		<div className=' wow slideInLeft' >
           			<img src={programmer} alt="developer" className='w-full' />
           		</div>
-          		<div className='md:p-16 p-8'>
+          		<div className='md:p-16 p-8 '>
           			
-          			<div className='wow slideInRight '> I am a developer Nulla porttitor accumsan tincidunt. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. 
-					  Sed porttitor lectus nibh. Sed porttitor lectus nibh. Curabitur 
+          			<div className='wow slideInRight '> 
+					  <div className='m-6'>I am a developer Nulla porttitor accumsan tincidunt. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. 
+					  Sed porttitor lectus nibh. Sed porttitor lectus nibh. Curabitur</div> 
 					  <div>
-						  <div className='text-xl'>Experience</div>
+						  <div className='text-xl my-2 font-bold'>Experience</div>
 						  <div>
-							  Vielly
+							  <div className='text-lg my-2'>Vielly</div>
 							  <li>
 							  Development of UI of Car Pooling Application
 								Working With a Other Frontend Developer teams
 							  </li>
-								<li>
+							<li>
 									Integration of Apis
-								</li>
+							</li>
 						  </div>
 						  <br/>
-						  <div>
-							  HotJobs Africa
+						  <div className='my-2'>
+							  <div className='text-lg my-2'>Freelancing</div>
 							  <li> Develop wide range of web apps using Laravel and React</li>
 							  <li>Modified existing software to optimize efficeincy</li>
 							  <li>Application of software knowledge to solve problems in the community</li>
@@ -130,12 +131,13 @@ const App = () => {
 	
 					  </div>
 					  <div>
-						  <div className='text-xl'>Education</div>
-						  <div>
-							  University Of Ghana
+						  <div className='text-xl my-2 font-bold'>Education</div>
+						  <div >
+							
+							  <div className="text-lg ">  University Of Ghana</div>
 							  
 								<br/>
-							Udemy
+							<div className='text-lg my-2'>Udemy</div>
 							<li>Rob Percival's The Complete Web Developer 2.0</li>
 							<li>Colt Steele's The Web Developer Bootcamp</li>
 							<li>Andrei aneagoi's The Complete Web Develper Zero To Mastery</li>
@@ -145,8 +147,7 @@ const App = () => {
 						  </div>
 					  </div>
 					 
-					  ipit tortor eget felis porttitor volutpat. Donec rutrum congue leo
-					   eget malesuada.</div>
+					  </div>
           		</div>
           </section>
           						{/*Resume Section */}
@@ -155,6 +156,7 @@ const App = () => {
 				Coming Soon
 				</div> */}
 								{/* Skills Section */}
+								<Section  title='Skills' svg={portfolioSvg}/>
 								<div style={{display:'flex',justifyContent:'space-around'}}>
 				{
 					skills.map(each=>{
@@ -174,16 +176,16 @@ const App = () => {
 			  projects.map(each=>(
 					<div className='w-full  flex-col md:w-1/3 p-4'>
 					<a href={each.link} target='_blank' rel='noopener noreferrer' className=' wow slideInUp' >
-						<div className='project-wrapper  raise shadow-md p-4'>
+						<div className='project-wrapper  raise shadow-md p-2 lg:p-4'>
 						
 							<img src={each.image} alt="project" className=' w-full h-32 ' />
 						
 						<div className='h-24 lg:h-20'  >
 							<Divider />
-							<div>
+							<div className='max-w-full'>
 								{each.title}
 							</div>
-							<div>
+							<div className='max-w-full'>
 								{
 									each.stack.map(each=>(<span className='text-bold rounded m-2'>#{each}</span>))
 								}
