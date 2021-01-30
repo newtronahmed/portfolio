@@ -78,7 +78,7 @@ const App = () => {
 	<div id='App' >
 		<div className="w-full flex items-center top-0 sticky  h-12">
 			<div className="flex mx-auto md:w-4/6 md:justify-between  items-center ">
-				<a href="#" className='mx-2'><FacebookIcon />facebook</a>
+				<a href="https://github.com/newtronahmed" className='mx-2'><FacebookIcon />facebook</a>
 				<a href="https://twitter.com/neutronahmed" className='mx-2'><TwitterIcon />twitter</a>
 				<a href="https://github.com/newtronahmed" className='mx-2'><GitHubIcon /> <span>github</span></a>
 				<a href='tel:+23324778739' className='mx-2'><PhoneIcon />+23324778739</a>
@@ -106,42 +106,42 @@ const App = () => {
           		</div>
           		<div className='md:p-16 p-8 '>
           			
-          			<div className='wow slideInRight '> 
-					  <div className='m-6'>I am a developer Nulla porttitor accumsan tincidunt. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. 
+          			<div  > 
+					  <div className='m-6 wow slideInRight'>I am a developer Nulla porttitor accumsan tincidunt. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. 
 					  Sed porttitor lectus nibh. Sed porttitor lectus nibh. Curabitur</div> 
 					  <div>
-						  <div className='text-xl my-2 font-bold'>Experience</div>
+						  <div className='text-xl my-2 font-bold wow slideInLeft'>Experience</div>
 						  <div>
-							  <div className='text-lg my-2'>Vielly</div>
-							  <li>
+							  <div className='text-lg my-2 wow slideInRight'>Vielly</div>
+							  <li className='wow fadeIn'>
 							  Development of UI of Car Pooling Application
 								Working With a Other Frontend Developer teams
 							  </li>
-							<li>
+							<li className='wow fadeIn'>
 									Integration of Apis
 							</li>
 						  </div>
 						  <br/>
 						  <div className='my-2'>
-							  <div className='text-lg my-2'>Freelancing</div>
-							  <li> Develop wide range of web apps using Laravel and React</li>
-							  <li>Modified existing software to optimize efficeincy</li>
-							  <li>Application of software knowledge to solve problems in the community</li>
+							  <div className='text-lg my-2 wow slideInRight'>Freelancing</div>
+							  <li className='wow fadeIn'> Develop wide range of web apps using Laravel and React</li>
+							  <li className='wow fadeIn'>Modified existing software to optimize efficeincy</li>
+							  <li className='wow fadeIn'>Application of software knowledge to solve problems in the community</li>
 						  </div>
 	
 					  </div>
 					  <div>
-						  <div className='text-xl my-2 font-bold'>Education</div>
+						  <div className='text-xl my-2 font-bold wow slideInLeft'>Education</div>
 						  <div >
 							
-							  <div className="text-lg ">  University Of Ghana</div>
+							  <div className="text-lg wow slideInRight ">  University Of Ghana</div>
 							  
 								<br/>
-							<div className='text-lg my-2'>Udemy</div>
-							<li>Rob Percival's The Complete Web Developer 2.0</li>
-							<li>Colt Steele's The Web Developer Bootcamp</li>
-							<li>Andrei aneagoi's The Complete Web Develper Zero To Mastery</li>
-							<li>Laracast</li>
+							<div className='text-lg my-2 wow slideInRight'>Udemy</div>
+							<li className='wow fadeIn'>Rob Percival's The Complete Web Developer 2.0</li>
+							<li className='wow fadeIn'>Colt Steele's The Web Developer Bootcamp</li>
+							<li className='wow fadeIn'>Andrei aneagoi's The Complete Web Develper Zero To Mastery</li>
+							<li className='wow fadeIn'>Laracast</li>
 
 							
 						  </div>
@@ -168,15 +168,15 @@ const App = () => {
 								</div>
 		
           						{/*Works or Projects Section*/}
-          <section className='p-10'>
+          <section className='py-5 md:p-5'>
           <Section title='Projects Over the Years' svg={portfolioSvg} />
 		  
-          	<div className='container flex md:justify-evenly flex-wrap    '>
+          	<div className='container flex md:justify-evenly flex-col md:flex-row flex-wrap    '>
 			  {
 			  projects.map(each=>(
-					<div className='w-full  flex-col md:w-1/3 p-4'>
-					<a href={each.link} target='_blank' rel='noopener noreferrer' className=' wow slideInUp' >
-						<div className='project-wrapper  raise shadow-md p-2 lg:p-4'>
+					<div className='w-full   md:w-1/3 p-6 wow slideInUp'>
+					<a href={each.link} target='_blank' rel='noopener noreferrer' className='max-w-full ' >
+						<div className='project-wrapper  raise shadow-md p-4 lg:p-6'>
 						
 							<img src={each.image} alt="project" className=' w-full h-32 ' />
 						
