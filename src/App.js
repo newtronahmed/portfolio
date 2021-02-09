@@ -91,7 +91,7 @@ const App = () => {
 				<div className='border-2 border-white md:text-2xl text-white px-4 py-1 font-bold bg-black tracking-widest name '>Zubairu</div>
 				</div>
 				<div className=' text-white p-4 ' >
-				 <span className='bg-black md:text-2xl p-2 name'>I am Developer</span>
+				 <span className='bg-black md:text-2xl p-2 name'>I am a Developer</span>
 				</div>
 				 
 				
@@ -171,7 +171,12 @@ const App = () => {
 					})
 				}
 								</div>
-		
+								<div>What i can do</div>
+								{/* what i can do
+
+								Design What you want
+								develop what you need - fast and
+								help you to grow  -increase traffic*/}
           						{/*Works or Projects Section*/}
           <section className='py-5 md:p-5'>
           <Section title='Projects Over the Years' svg={portfolioSvg} />
