@@ -23,6 +23,7 @@ import react from './images/react.png'
 import mysql from './images/mysql.png'
 import  sass from './images/sass.png'
 import nodejs from './images/nodejs.png'
+import yelpcamp from './images/yelpcamp.png'
 
 
 
@@ -70,6 +71,12 @@ const App = () => {
 			stack:['react','context-api','tailwind-css'],
 			image:market,
 			link:'http://newtro-market.netlify.app',
+		},
+		{
+			title:'YelpCamp Express  Project',
+			stack:['Express', 'Ejs', 'PassportJs'],
+			link:'http://https://stormy-falls-57297.herokuapp.com',
+			image:yelpcamp,
 		}
 		
 	]
