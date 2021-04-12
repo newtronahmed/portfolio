@@ -1,5 +1,6 @@
 
 import React ,{useEffect}from 'react';
+import {motion} from 'framer-motion'
 import TwitterIcon from '@material-ui/icons/Twitter';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -26,13 +27,61 @@ import nodejs from './images/nodejs.png'
 import yelpcamp from './images/yelpcamp.png'
 
 
+const containerVariants = {
+	init:{
+		opacity:0,
+	},
+	end:{
+		opacity:1,
+		transition:{
+			when:'beforeChildren',
+			type:'tween',
+			duration:1.3,
+			staggerChildren:0.6,
+		}
+	},
+}
+const childrenVariant ={
+	init:{
+		opacity:0,
+		y:100,
+	},
+	end:{
+		opacity:1,
+		y:0,
+		transition:{
+			duration:1.3,
+		}
+	}
+}
+const experienceVariant = {
+	init:{
+		
+	},
+	end:{
+		
+		transition:{
+			when:'beforeChildren',
+			staggerChildren:1,
+
+		}
+	}
+}
+const fadeVariant ={
+	init:{
+		opacity:0,
+	},
+	end:{
+		opacity:1,
+	}
+}
 
 const App = () => {
-	useEffect(() => {
-		new WOW.WOW({
-		    live: false
-		}).init();
-	}, [])
+	// useEffect(() => {
+	// 	new WOW.WOW({
+	// 	    live: false
+	// 	}).init();
+	// }, [])
 	const skills = [nodejs,javascript,laravel,react,mysql,sass]
 	const projects = [
 		{
@@ -75,7 +124,7 @@ const App = () => {
 		{
 			title:'YelpCamp Express  Project',
 			stack:['Express', 'Ejs', 'PassportJs'],
-			link:'http://https://stormy-falls-57297.herokuapp.com',
+			link:'http://stormy-falls-57297.herokuapp.com',
 			image:yelpcamp,
 		}
 		
@@ -91,18 +140,17 @@ const App = () => {
 				<a href='tel:+23324778739' className='mx-2'><PhoneIcon />+23324778739</a>
 			</div>
 		</div>
-	      	<div className="w-full min-h-screen  bg-fixed bg-cover flex items-center justify-center flex-wrap   " id="banner" style={{alignContent:'center'}}>
-				  <div className='text-white name'>Hi, i am</div>
-	     		<div className='w-full flex justify-center'>
+	      	<motion.div variants={containerVariants} initial='init' animate='end' className="w-full min-h-screen  bg-fixed bg-cover flex items-center justify-center flex-wrap   " id="banner" style={{alignContent:'center'}}>
+				  <motion.div variants={childrenVariant} className='text-white name'>Hi, i am</motion.div>
+	     		<motion.div variants={childrenVariant} className='w-full flex justify-center'>
 				 <div className='border-2 border-black md:text-2xl  bg-black  lg:bg-transparent text-white px-4 py-1 name font-bold tracking-widest'>Ahmed</div>
 				<div className='border-2 border-white md:text-2xl text-white px-4 py-1 font-bold bg-black tracking-widest name '>Zubairu</div>
-				</div>
-				<div className=' text-white p-4 ' >
+				</motion.div>
+				<motion.div variants={childrenVariant} className=' text-white p-4 ' >
 				 <span className='bg-black md:text-2xl p-2 name'>I am a Developer</span>
-				</div>
-				 
+				</motion.div>
 				
-	      	</div>
+	      	</motion.div>
 	      
 	      
           						{/*About Me Section*/}
@@ -122,24 +170,25 @@ const App = () => {
 						    I free-lance using the skills i have acquired from platforms like Udemy and Freecodecamp. Currently I am learning nodejs and  mongoDB. Lastly , I am open to job opportunities.
 					  </div> 
 					  <div>
-						  <div className='text-xl my-2 font-bold wow slideInLeft'>Experience</div>
-						  <div>
-							  <div className='text-lg my-2 wow slideInRight'>Vielly</div>
-							  <li className='wow fadeIn'>
+						  
+						  <motion.div variants={experienceVariant} initial='init' animate='end'>
+						  	<motion.div variants={fadeVariant}  className='text-xl my-2 font-bold wow '>Experience</motion.div>
+							  <motion.div variants={fadeVariant}  className='text-lg my-2 wow'>Vielly</motion.div>
+							  <motion.li variants={fadeVariant} className='wow '>
 							  Development of UI of Car Pooling Application
 								Working With a Other Frontend Developer teams
-							  </li>
-							<li className='wow fadeIn'>
+							  </motion.li>
+								<motion.li variants={fadeVariant} className='wow '>
 									Integration of Apis
-							</li>
-						  </div>
+								</motion.li>
+						  	</motion.div>
 						  <br/>
-						  <div className='my-2'>
-							  <div className='text-lg my-2 wow slideInRight'>Freelancing</div>
-							  <li className='wow fadeIn'> Develop wide range of web apps using Laravel and React</li>
-							  <li className='wow fadeIn'>Modified existing software to optimize efficeincy</li>
-							  <li className='wow fadeIn'>Application of software knowledge to solve problems in the community</li>
-						  </div>
+						  <motion.div variants={experienceVariant} initial='init' animate='end' className='my-2'>
+							  <motion.div variants={fadeVariant} className='text-lg my-2 wow slideInRight'>Freelancing</motion.div>
+							  <motion.li variants={fadeVariant} className='wow fadeIn'> Develop wide range of web apps using Laravel and React</motion.li>
+							  <motion.li variants={fadeVariant} className='wow fadeIn'>Modified existing software to optimize efficeincy</motion.li>
+							  <motion.li variants={fadeVariant} className='wow fadeIn'>Application of software knowledge to solve problems in the community</motion.li>
+						  </motion.div>
 	
 					  </div>
 					  <div>
@@ -178,7 +227,7 @@ const App = () => {
 					})
 				}
 								</div>
-								<div>What i can do</div>
+							
 								{/* what i can do
 
 								Design What you want
