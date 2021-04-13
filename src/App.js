@@ -283,13 +283,13 @@ const App = () => {
 				<div className='container flex md:justify-evenly flex-col md:flex-row flex-wrap    '>
 					{
 						projects.map(each => (
-							<div className='w-full   md:w-1/3 p-6 wow slideInUp'>
+							<div className='w-full   md:w-1/3 p-6 wow slideInUp h-auto'>
 								<a href={each.link} target='_blank' rel='noopener noreferrer' className='max-w-full ' >
 									<div className='project-wrapper  raise shadow-md p-4 lg:p-6'>
 
-										<img src={each.image} alt="project" className=' w-full h-32 ' />
+										<img src={each.image} alt="project" className=' w-full lg:h-32 ' />
 
-										<div className='h-24 lg:h-20'  >
+										<div className='lg:h-24 lg:h-20'  >
 											<Divider />
 											<div className='max-w-full'>
 												{each.title}
