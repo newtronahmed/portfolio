@@ -52,7 +52,7 @@ const childrenVariant = {
 		opacity: 1,
 		y: 0,
 		transition: {
-			duration: 1.3,
+			duration: 1.2,
 		}
 	}
 }
@@ -66,7 +66,7 @@ const experienceVariant = {
 		opacity: 1,
 		transition: {
 			when: 'beforeChildren',
-			staggerChildren: 1,
+			staggerChildren: 0.5,
 
 		}
 	}
@@ -125,7 +125,7 @@ const App = () => {
 			controls.start('init')
 		}
 
-	}, [controls, inView])
+	}, [])
 	const skills = [nodejs, javascript, laravel, react, mysql, sass]
 	const projects = [
 		{
@@ -160,7 +160,7 @@ const App = () => {
 			link: 'http://newtronahmed.netlify.app',
 		},
 		{
-			title: 'React House Market Project',
+			title: ' House Market Project',
 			stack: ['react', 'context-api', 'tailwind-css'],
 			image: market,
 			link: 'http://newtro-market.netlify.app',
@@ -170,7 +170,14 @@ const App = () => {
 			stack: ['Express', 'Ejs', 'PassportJs'],
 			link: 'http://stormy-falls-57297.herokuapp.com',
 			image: yelpcamp,
+		},
+		{
+			title:'ConverX chat application',
+			stack:['Expressjs','Socket.io','MongoDb','Material Ui'],
+			link:'http://brave-visvesvaraya-2ba0ba.netlify.app',
+			image:yelpcamp
 		}
+		
 
 	]
 
@@ -186,12 +193,7 @@ const App = () => {
 				<motion.div variants={childrenVariant} className=' p-4' >
 					<div className='bg-black  md:text-2xl p-2 name'>I am a Developer</div>
 				</motion.div>
-				<motion.div variants={socialLinksVariants} className='flex flex-col md:flex-row w-full justify-center'>
-					<motion.a variants={socialLinks} href="https://github.com/newtronahmed" className='mx-2 border-2 rounded-full px-2 py-2'><FacebookIcon /></motion.a>
-					<motion.a variants={socialLinks} href="https://twitter.com/neutronahmed" className='mx-2 border-2 rounded-full px-2 py-2'><TwitterIcon /></motion.a>
-					<motion.a variants={socialLinks} href="https://github.com/newtronahmed" className='mx-2 border-2 rounded-full px-2 py-2'><GitHubIcon /> </motion.a>
-					<motion.a variants={socialLinks} href='tel:+23324778739' className='mx-2 border-2 rounded-full px-2 py-2'><PhoneIcon /></motion.a>
-				</motion.div>
+				
 
 			</motion.div>
 
@@ -226,7 +228,7 @@ const App = () => {
 								</motion.li>
 							</motion.div>
 							<br />
-							<motion.div variants={experienceVariant} initial='init' animate='end' className='my-2 wow'>
+							<motion.div variants={experienceVariant} ref={ref} initial='init' animate={controls} className='my-2 wow'>
 								<motion.div variants={fadeVariant} className='text-lg my-2 wow '>Freelancing</motion.div>
 								<motion.li variants={fadeVariant} className='wow fadeIn'> Develop wide range of web apps using Laravel and React</motion.li>
 								<motion.li variants={fadeVariant} className='wow fadeIn'>Modified existing software to optimize efficeincy</motion.li>
@@ -234,22 +236,22 @@ const App = () => {
 							</motion.div>
 
 						</div>
-						<div>
-							<div className='text-xl my-2 font-bold wow slideInLeft'>Education</div>
-							<div >
+						
+							<motion.div variants={experienceVariant} ref={ref} initial='init' animate={controls} >
+							<motion.div  className='text-xl my-2 font-bold wow slideInLeft'>Education</motion.div>
 
-								<div className="text-lg wow slideInRight ">  University Of Ghana</div>
+								<motion.div variants={fadeVariant} className="text-lg wow slideInRight ">  University Of Ghana</motion.div>
 
 								<br />
-								<div className='text-lg my-2 wow slideInRight'>Udemy</div>
-								<li className='wow fadeIn'>Rob Percival's The Complete Web Developer 2.0</li>
-								<li className='wow fadeIn'>Colt Steele's The Web Developer Bootcamp</li>
-								<li className='wow fadeIn'>Andrei aneagoi's The Complete Web Develper Zero To Mastery</li>
-								<li className='wow fadeIn'>Laracast</li>
+								<motion.div variants={fadeVariant} className='text-lg my-2 wow slideInRight'>Udemy</motion.div>
+								<motion.li variants={fadeVariant} className='wow fadeIn'>Rob Percival's The Complete Web Developer 2.0</motion.li>
+								<motion.li variants={fadeVariant} className='wow fadeIn'>Colt Steele's The Web Developer Bootcamp</motion.li>
+								<motion.li variants={fadeVariant} className='wow fadeIn'>Andrei aneagoi's The Complete Web Develper Zero To Mastery</motion.li>
+								<motion.li variants={fadeVariant} className='wow fadeIn'>Laracast</motion.li>
 
 
-							</div>
-						</div>
+							</motion.div>
+					
 
 					</div>
 				</div>
@@ -291,7 +293,7 @@ const App = () => {
 
 										<div className='lg:h-24 lg:h-20'  >
 											<Divider />
-											<div className='max-w-full'>
+											<div className='max-w-full font-bold'>
 												{each.title}
 											</div>
 											<div className='max-w-full'>
@@ -320,7 +322,18 @@ const App = () => {
 					}
 				</div>
 			</section>
-
+		<footer className='justify-center flex '>
+		<div class="px-4 mt-4 sm:w-1/3 xl:w-1/6 sm:mx-auto xl:mt-0 xl:ml-auto">
+        <h5 class="text-xl font-bold mb-6 sm:text-center xl:text-left">Stay connected</h5>
+        
+		<motion.div variants={socialLinksVariants} className='flex  w-full justify-center'>
+					<motion.a variants={socialLinks} href="https://github.com/newtronahmed" className="w-8 h-8 border border-2 border-gray-400 rounded-full text-center py-1 ml-2 text-gray-600 hover:text-white hover:bg-blue-400 hover:border-blue-400"><FacebookIcon /></motion.a>
+					<motion.a variants={socialLinks} href="https://twitter.com/neutronahmed" className="w-8 h-8 border border-2 border-gray-400 rounded-full text-center py-1 ml-2 text-gray-600 hover:text-white hover:bg-blue-400 hover:border-blue-400"><TwitterIcon /></motion.a>
+					<motion.a variants={socialLinks} href="https://github.com/newtronahmed" className="w-8 h-8 border border-2 border-gray-400 rounded-full text-center py-1 ml-2 text-gray-600 hover:text-white hover:bg-blue-400 hover:border-blue-400"><GitHubIcon /> </motion.a>
+					<motion.a variants={socialLinks} href='tel:+23324778739' className="w-8 h-8 border border-2 border-gray-400 rounded-full text-center py-1 ml-2 text-gray-600 hover:text-white hover:bg-blue-400 hover:border-blue-400"><PhoneIcon /></motion.a>
+		</motion.div>
+      </div>
+		</footer>
 
 		</div>
 	)
