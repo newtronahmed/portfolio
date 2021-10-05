@@ -33,8 +33,8 @@ export const experienceVariant = {
 		opacity: 1,
 		transition: {
 			when: 'beforeChildren',
-			staggerChildren: 0.5,
-			duration:1.1
+			staggerChildren: 0.2,
+			duration:1.05
 		}
 	}
 }
