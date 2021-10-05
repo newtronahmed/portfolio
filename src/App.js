@@ -28,97 +28,6 @@ import nodejs from './images/nodejs.png'
 import yelpcamp from './images/yelpcamp.png'
 import {containerVariants , childrenVariant , experienceVariant , socialLinksVariants, fadeVariant , socialLinks , projectList} from './utilities/motion'
 
-
-
-// const containerVariants = {
-// 	init: {
-// 		opacity: 0,
-// 	},
-// 	end: {
-// 		opacity: 1,
-// 		transition: {
-// 			when: 'beforeChildren',
-// 			type: 'tween',
-// 			duration: 1.3,
-// 			staggerChildren: 0.6,
-// 		}
-// 	},
-// }
-// const childrenVariant = {
-// 	init: {
-// 		opacity: 0,
-// 		y: 100,
-// 	},
-// 	end: {
-// 		opacity: 1,
-// 		y: 0,
-// 		transition: {
-// 			duration: 1.2,
-// 		}
-// 	}
-// }
-// const experienceVariant = {
-// 	init: {
-
-// 		opacity: 0,
-// 	},
-// 	end: {
-
-// 		opacity: 1,
-// 		transition: {
-// 			when: 'beforeChildren',
-// 			staggerChildren: 0.5,
-
-// 		}
-// 	}
-// }
-// const fadeVariant = {
-// 	init: {
-// 		opacity: 0,
-// 	},
-// 	end: {
-// 		opacity: 1,
-// 	}
-// }
-// const socialLinksVariants = {
-// 	init:{
-		
-// 		transition:{
-// 			staggerChildren:1
-// 		}
-// 	},
-// 	end:{
-		
-// 		transition:{
-// 			staggerChildren:0.2,
-			
-// 		}
-// 	}
-// }
-// const socialLinks = {
-// 	init:{
-// 		y:0,
-// 	},
-// 	end:{
-// 		y:[0,-10,0],
-// 		transition:{
-// 			ease:'easeIn',
-// 			// duration:0.2,
-// 			yoyo:3,
-// 		}
-// 	},
-	
-// }
-
-// const projectList = {
-// 	init:{
-// 		opacity:0,
-// 	},
-// 	end:{
-// 		opacity:1,
-// 	}
-// }
-
 const App = () => {
 	// useEffect(() => {
 	// 	new WOW.WOW({
@@ -219,16 +128,16 @@ const App = () => {
 
 					<div  >
 						<div className='m-6 wow slideInRight'>
-							Ahmed Zubairu. I am a mid-level professional <strong>Web developer</strong> and a L300 student of the University of Ghana . I am a hardworking , creative , and a very honest person .
+							Hello, I am Ahmed Zubairu , a mid-level professional <strong>Web developer</strong> and a L300 student of the University of Ghana . I am a hardworking , creative , and a very honest person .
 							I am very passionate about software development because I am able to bring my ideas to Life. Infact I am a self-taught web developer and as you may know it takes more than just passion to be a self-taught developer.
-							I have hands on experience in building complex react , larvel  and Mern stack applictions .
+							I have hands on experience in building complex react , laravel  and Mern stack applictions .
 							Recently I worked under a team of react-native developers in developing the interface of a car-pooling application popularly known as Vielly.
 							I free-lance using the skills I have acquired through  platforms like Udemy , Freecodecamp , tech blogs etc. Currently I am learning nodejs and  mongoDB. Lastly , I am open to job opportunities.
 					  </div>
 						<div>
 
 							<motion.div variants={experienceVariant} ref={ref} animate={controls} initial='init'  className='wow' >
-								<motion.div variants={fadeVariant} className='text-xl wow my-2 font-bold wow '>Experience</motion.div>
+								<motion.div variants={fadeVariant} className='text-xl wow capitalize my-2 font-bold wow '>Experience</motion.div>
 								<motion.div variants={fadeVariant} className='text-lg wow my-2 wow'>Vielly</motion.div>
 								<motion.li variants={fadeVariant} className='wow '>
 									Development of UI of Car Pooling Application
@@ -240,10 +149,11 @@ const App = () => {
 							</motion.div>
 							<br />
 							<motion.div variants={experienceVariant}  initial='init' animate={controls} className='my-2 wow'>
-								<motion.div variants={fadeVariant} className='text-lg my-2 wow '>Freelancing</motion.div>
-								<motion.li variants={fadeVariant} className='wow fadeIn'> Develop wide range of web apps using Laravel and React</motion.li>
-								<motion.li variants={fadeVariant} className='wow fadeIn'>Modified existing software to optimize efficeincy</motion.li>
-								<motion.li variants={fadeVariant} className='wow fadeIn'>Application of software knowledge to solve problems in the community</motion.li>
+								<motion.div variants={fadeVariant} className='text-lg capitalize my-2 wow '>Full-stack dev internship</motion.div>
+								<motion.li variants={fadeVariant} className='wow fadeIn'>Developing the api documentation of FayaSMS , bulk sms platform</motion.li>
+								<motion.li variants={fadeVariant} className='wow fadeIn'>Contributed in implementing features on FayaSMS admin dashboard </motion.li>
+								
+								<motion.li variants={fadeVariant} className='wow fadeIn'>Developing skills in ReactJs and Laravel</motion.li>
 							</motion.div>
 
 						</div>
