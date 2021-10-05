@@ -26,88 +26,98 @@ import mysql from './images/mysql.png'
 import sass from './images/sass.png'
 import nodejs from './images/nodejs.png'
 import yelpcamp from './images/yelpcamp.png'
+import {containerVariants , childrenVariant , experienceVariant , socialLinksVariants, fadeVariant , socialLinks , projectList} from './utilities/motion'
 
 
 
-const containerVariants = {
-	init: {
-		opacity: 0,
-	},
-	end: {
-		opacity: 1,
-		transition: {
-			when: 'beforeChildren',
-			type: 'tween',
-			duration: 1.3,
-			staggerChildren: 0.6,
-		}
-	},
-}
-const childrenVariant = {
-	init: {
-		opacity: 0,
-		y: 100,
-	},
-	end: {
-		opacity: 1,
-		y: 0,
-		transition: {
-			duration: 1.2,
-		}
-	}
-}
-const experienceVariant = {
-	init: {
+// const containerVariants = {
+// 	init: {
+// 		opacity: 0,
+// 	},
+// 	end: {
+// 		opacity: 1,
+// 		transition: {
+// 			when: 'beforeChildren',
+// 			type: 'tween',
+// 			duration: 1.3,
+// 			staggerChildren: 0.6,
+// 		}
+// 	},
+// }
+// const childrenVariant = {
+// 	init: {
+// 		opacity: 0,
+// 		y: 100,
+// 	},
+// 	end: {
+// 		opacity: 1,
+// 		y: 0,
+// 		transition: {
+// 			duration: 1.2,
+// 		}
+// 	}
+// }
+// const experienceVariant = {
+// 	init: {
 
-		opacity: 0,
-	},
-	end: {
+// 		opacity: 0,
+// 	},
+// 	end: {
 
-		opacity: 1,
-		transition: {
-			when: 'beforeChildren',
-			staggerChildren: 0.5,
+// 		opacity: 1,
+// 		transition: {
+// 			when: 'beforeChildren',
+// 			staggerChildren: 0.5,
 
-		}
-	}
-}
-const fadeVariant = {
-	init: {
-		opacity: 0,
-	},
-	end: {
-		opacity: 1,
-	}
-}
-const socialLinksVariants = {
-	init:{
+// 		}
+// 	}
+// }
+// const fadeVariant = {
+// 	init: {
+// 		opacity: 0,
+// 	},
+// 	end: {
+// 		opacity: 1,
+// 	}
+// }
+// const socialLinksVariants = {
+// 	init:{
 		
-		transition:{
-			staggerChildren:1
-		}
-	},
-	end:{
+// 		transition:{
+// 			staggerChildren:1
+// 		}
+// 	},
+// 	end:{
 		
-		transition:{
-			staggerChildren:0.2,
+// 		transition:{
+// 			staggerChildren:0.2,
 			
-		}
-	}
-}
-const socialLinks = {
-	init:{
-		y:0,
-	},
-	end:{
-		y:[0,-10,0],
-		transition:{
-			ease:'easeIn',
-			// duration:0.2,
-			yoyo:3,
-		}
-	},
+// 		}
+// 	}
+// }
+// const socialLinks = {
+// 	init:{
+// 		y:0,
+// 	},
+// 	end:{
+// 		y:[0,-10,0],
+// 		transition:{
+// 			ease:'easeIn',
+// 			// duration:0.2,
+// 			yoyo:3,
+// 		}
+// 	},
 	
-}
+// }
+
+// const projectList = {
+// 	init:{
+// 		opacity:0,
+// 	},
+// 	end:{
+// 		opacity:1,
+// 	}
+// }
 
 const App = () => {
 	// useEffect(() => {
@@ -125,7 +135,7 @@ const App = () => {
 			controls.start('init')
 		}
 
-	}, [])
+	}, [inView])
 	const skills = [nodejs, javascript, laravel, react, mysql, sass]
 	const projects = [
 		{
@@ -178,6 +188,7 @@ const App = () => {
 			image:yelpcamp
 		}
 		
+	
 
 	]
 
@@ -191,7 +202,7 @@ const App = () => {
 					<div className='border-2 border-white md:text-2xl text-white px-4 py-1 font-bold bg-black tracking-widest name '>Zubairu</div>
 				</motion.div>
 				<motion.div variants={childrenVariant} className=' p-4' >
-					<div className='bg-black  md:text-2xl p-2 name'>I am a Developer</div>
+					<div className='bg-black  md:text-2xl p-2 name text-white'>I am a Developer</div>
 				</motion.div>
 				
 
@@ -208,15 +219,15 @@ const App = () => {
 
 					<div  >
 						<div className='m-6 wow slideInRight'>
-							My name is Ahmed Zubairu. I am a mid-level professional webdeveloper and a student of the University of Ghana . I am a hardworking , creative , and very honest .
-							I am very passionate about software development . Infact I am a self-taught web developer and as you may know it takes more than just passion to be a self-taught developer.
-							I have hands on experience in building complex react or larvel applictions .
-							I also worked in a team of react-native developers in developing the interface of a car-pooling application popularly known as Vielly.
-							I free-lance using the skills i have acquired from platforms like Udemy and Freecodecamp. Currently I am learning nodejs and  mongoDB. Lastly , I am open to job opportunities.
+							Ahmed Zubairu. I am a mid-level professional <strong>Web developer</strong> and a L300 student of the University of Ghana . I am a hardworking , creative , and a very honest person .
+							I am very passionate about software development because I am able to bring my ideas to Life. Infact I am a self-taught web developer and as you may know it takes more than just passion to be a self-taught developer.
+							I have hands on experience in building complex react , larvel  and Mern stack applictions .
+							Recently I worked under a team of react-native developers in developing the interface of a car-pooling application popularly known as Vielly.
+							I free-lance using the skills I have acquired through  platforms like Udemy , Freecodecamp , tech blogs etc. Currently I am learning nodejs and  mongoDB. Lastly , I am open to job opportunities.
 					  </div>
 						<div>
 
-							<motion.div variants={experienceVariant} ref={ref} initial='init' animate={controls} className='wow' >
+							<motion.div variants={experienceVariant} ref={ref} animate={controls} initial='init'  className='wow' >
 								<motion.div variants={fadeVariant} className='text-xl wow my-2 font-bold wow '>Experience</motion.div>
 								<motion.div variants={fadeVariant} className='text-lg wow my-2 wow'>Vielly</motion.div>
 								<motion.li variants={fadeVariant} className='wow '>
@@ -228,7 +239,7 @@ const App = () => {
 								</motion.li>
 							</motion.div>
 							<br />
-							<motion.div variants={experienceVariant} ref={ref} initial='init' animate={controls} className='my-2 wow'>
+							<motion.div variants={experienceVariant}  initial='init' animate={controls} className='my-2 wow'>
 								<motion.div variants={fadeVariant} className='text-lg my-2 wow '>Freelancing</motion.div>
 								<motion.li variants={fadeVariant} className='wow fadeIn'> Develop wide range of web apps using Laravel and React</motion.li>
 								<motion.li variants={fadeVariant} className='wow fadeIn'>Modified existing software to optimize efficeincy</motion.li>
@@ -238,9 +249,9 @@ const App = () => {
 						</div>
 						
 							<motion.div variants={experienceVariant} ref={ref} initial='init' animate={controls} >
-							<motion.div  className='text-xl my-2 font-bold wow slideInLeft'>Education</motion.div>
+								<motion.div  className='text-xl my-2 font-bold wow slideInLeft'>Education</motion.div>
 
-								<motion.div variants={fadeVariant} className="text-lg wow slideInRight ">  University Of Ghana</motion.div>
+								<motion.div variants={fadeVariant} className="text-lg wow slideInRight ">University Of Ghana</motion.div>
 
 								<br />
 								<motion.div variants={fadeVariant} className='text-lg my-2 wow slideInRight'>Udemy</motion.div>
@@ -272,6 +283,9 @@ const App = () => {
 					})
 				}
 			</div>
+			<div class='neonText'>
+				Hello world
+			</div>
 
 			{/* what i can do
 
@@ -299,10 +313,10 @@ const App = () => {
 											<div className='max-w-full'>
 												{
 													each.stack.map(each => (<div
-														class="text-xs inline-flex items-center font-bold leading-sm uppercase  bg-blue-200 text-blue-700 rounded-full"
+														className="text-xs inline-flex items-center font-bold leading-sm uppercase  bg-blue-200 text-blue-700 rounded-full"
 													>
-														<div class="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-blue-200 text-blue-700 rounded-full">
-															<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+														<div className="text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-blue-200 text-blue-700 rounded-full">
+															<svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
 																<path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z" />
 															</svg>
 															{each}
@@ -327,10 +341,10 @@ const App = () => {
         <h5 class="text-xl font-bold mb-6 sm:text-center xl:text-left">Stay connected</h5>
         
 		<motion.div variants={socialLinksVariants} className='flex  w-full justify-center'>
-					<motion.a variants={socialLinks} href="https://github.com/newtronahmed" className="w-8 h-8 border border-2 border-gray-400 rounded-full text-center py-1 ml-2 text-gray-600 hover:text-white hover:bg-blue-400 hover:border-blue-400"><FacebookIcon /></motion.a>
-					<motion.a variants={socialLinks} href="https://twitter.com/neutronahmed" className="w-8 h-8 border border-2 border-gray-400 rounded-full text-center py-1 ml-2 text-gray-600 hover:text-white hover:bg-blue-400 hover:border-blue-400"><TwitterIcon /></motion.a>
-					<motion.a variants={socialLinks} href="https://github.com/newtronahmed" className="w-8 h-8 border border-2 border-gray-400 rounded-full text-center py-1 ml-2 text-gray-600 hover:text-white hover:bg-blue-400 hover:border-blue-400"><GitHubIcon /> </motion.a>
-					<motion.a variants={socialLinks} href='tel:+23324778739' className="w-8 h-8 border border-2 border-gray-400 rounded-full text-center py-1 ml-2 text-gray-600 hover:text-white hover:bg-blue-400 hover:border-blue-400"><PhoneIcon /></motion.a>
+					<motion.a variants={socialLinks} href="https://github.com/newtronahmed" className="w-8 h-8 border border-2 border-gray-400 rounded-full text-center py-1 ml-2 text-gray-600 hover:text-white hover:bg-blue-400 hover:border-blue-400 pb-1"><FacebookIcon /></motion.a>
+					<motion.a variants={socialLinks} href="https://twitter.com/neutronahmed" className="w-8 h-8 border border-2 border-gray-400 rounded-full text-center py-1 ml-2 text-gray-600 hover:text-white hover:bg-blue-400 hover:border-blue-400 pb-1"><TwitterIcon /></motion.a>
+					<motion.a variants={socialLinks} href="https://github.com/newtronahmed" className="w-8 h-8 border border-2 border-gray-400 rounded-full text-center py-1 ml-2 text-gray-600 hover:text-white hover:bg-blue-400 hover:border-blue-400 pb-1"><GitHubIcon /> </motion.a>
+					<motion.a variants={socialLinks} href='tel:+23324778739' className="w-8 h-8 border border-2 border-gray-400 rounded-full text-center py-1 ml-2 text-gray-600 hover:text-white hover:bg-blue-400 hover:border-blue-400 pb-1"><PhoneIcon /></motion.a>
 		</motion.div>
       </div>
 		</footer>
