@@ -27,7 +27,7 @@ import sass from './images/sass.png'
 import nodejs from './images/nodejs.png'
 import yelpcamp from './images/yelpcamp.png'
 import {containerVariants , childrenVariant , experienceVariant , socialLinksVariants, fadeVariant , socialLinks , projectList} from './utilities/motion'
-
+import ahmedzona from './images/ahmedzona.png'
 const App = () => {
 	// useEffect(() => {
 	// 	new WOW.WOW({
@@ -52,6 +52,13 @@ const App = () => {
 			stack: ['react', 'styled-components', 'bootstrap',],
 			image: frontendMentor,
 			link: 'http://newtrojoblisting.netlify.app'
+
+		},
+		{
+			title:'Nextjs Ecommerce website + paypal integration',
+			stack:['nextjs','material-ui','paypal','vercel'],
+			image: ahmedzona,
+			link:'https://ahmedzona.vercel.app'
 
 		},
 		{
