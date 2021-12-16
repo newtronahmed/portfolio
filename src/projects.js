@@ -4,17 +4,25 @@ import robofriends from './images/robofriends (1).png'
 import ecommerce from './images/ecommerce.png'
 import inventory from './images/inventory.png'
 import yelpcamp from './images/yelpcamp.png'
+import ahmedzona from './images/ahmedzona.png'
 const projects = [
     {
         title: 'Frontend Mentor Joblisting Challenge',
-        stack: ['react', 'styled-components', 'bootstrap',],
+        stack: ['styled-components', 'bootstrap',],
         image: frontendMentor,
         link: 'http://newtrojoblisting.netlify.app'
 
     },
     {
+        title:'Nextjs Ecommerce website + paypal integration',
+        stack:['nextjs','material-ui','paypal','vercel'],
+        image: ahmedzona,
+        link:'https://ahmedzona.vercel.app'
+
+    },
+    {
         title: 'React Laravel SPA + Laravel Sanctum Auth',
-        stack: ['laravel', 'laravel-sanctum', 'react'],
+        stack: [ 'laravel/laravel-sanctum', 'react'],
         image: frontendMentor,
         link: 'https://github.com/newtronahmed'
     },

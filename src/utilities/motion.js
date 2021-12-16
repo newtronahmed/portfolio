@@ -8,7 +8,7 @@ export const containerVariants = {
 			when: 'beforeChildren',
 			type: 'tween',
 			duration: 1.3,
-			staggerChildren: 0.6,
+			staggerChildren: 0.5,
 		}
 	},
 }
@@ -33,7 +33,7 @@ export const experienceVariant = {
 		opacity: 1,
 		transition: {
 			when: 'beforeChildren',
-			staggerChildren: 0.2,
+			staggerChildren: 0.05,
 			duration:1.05
 		}
 	}
