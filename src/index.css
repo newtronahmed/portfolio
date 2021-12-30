@@ -28,35 +28,6 @@
   --title-font-size: 3.5rem;
 }
 
-svg#freepik_stories-website-creator:not(.animated) .animable {
-  opacity: 0;
-}
-svg#freepik_stories-website-creator.animated
-  #freepik--background-simple--inject-2 {
-  animation: 1.5s Infinite linear floating;
-  animation-delay: 0s;
-}
-svg#freepik_stories-website-creator.animated #freepik--Window--inject-2 {
-  animation: 1.5s Infinite linear floating;
-  animation-delay: 0s;
-}
-svg#freepik_stories-website-creator.animated #freepik--Character--inject-2 {
-  animation: 1.5s Infinite linear floating;
-  animation-delay: 0s;
-}
-@keyframes floating {
-  0% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
 
 @font-face {
   font-family: "Share Tech Mono", monospace;
@@ -110,8 +81,9 @@ svg:hover {
   color: var(--white);
   font-size: Share Tech Mono, monospace;
 }
-.text-green {
-  color: var(--green);
+
+.text-white {
+	color:var(--white)
 }
 .border-green {
   border-color: var(--green);
@@ -214,6 +186,9 @@ h2::after {
       rgba(0, 0, 0, 0.8) 100%
     ),
     url(/assets/landing-page.png) center no-repeat;
+}
+#id a {
+	color:var(--white);
 }
 /* rgb(10,25,47) */
 /* rgb(100,255,218) */

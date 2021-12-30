@@ -1,8 +1,8 @@
 module.exports = {
-  purge:{
-    enable:true,
-    content:[
-      './src/App.js'
+  purge: {
+    enable: true,
+    content: [
+      './src/**/*.js'
     ]
   },
   plugins: [

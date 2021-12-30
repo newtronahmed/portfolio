@@ -26,10 +26,9 @@ function Services() {
               </svg>
             </div>
             <p className="mt-2">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit
-              sapiente omnis, consequuntur, nisi quisquam consequatur totam
-              saepe laboriosam inventore, magnam est eveniet voluptates
-              architecto iure ipsa aspernatur dolore nobis molestiae!
+              Develop wide range of applications that's blazing fast and
+              captivating. Web Applications that are , responsive , easily
+              scalable , readable and reusable code etc.
             </p>
           </div>
         </div>
@@ -53,10 +52,9 @@ function Services() {
               </svg>
             </div>
             <p className="mt-2">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit
-              sapiente omnis, consequuntur, nisi quisquam consequatur totam
-              saepe laboriosam inventore, magnam est eveniet voluptates
-              architecto iure ipsa aspernatur dolore nobis molestiae!
+              Do you want to customize your website design ? If yes then look no
+              further. I can design your website with efficient tools and modern
+              design concepts that will amaze your site vistors.
             </p>
           </div>
         </div>
@@ -80,10 +78,9 @@ function Services() {
               </svg>
             </div>
             <p className="mt-2">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit
-              sapiente omnis, consequuntur, nisi quisquam consequatur totam
-              saepe laboriosam inventore, magnam est eveniet voluptates
-              architecto iure ipsa aspernatur dolore nobis molestiae!
+              Develop programs the best suits your customers. If you want to
+              boost your number of customers , or expose new products to
+              customers , Look no further.
             </p>
           </div>
         </div>

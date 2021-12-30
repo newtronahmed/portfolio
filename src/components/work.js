@@ -11,13 +11,8 @@ function Work() {
       <div className="container flex md:justify-center w-full mx-auto md:flex-row flex-wrap    ">
         {projects.map((each) => (
           <div className="w-full   md:w-1/3 p-6 wow slideInUp h-auto">
-            <a
-              href={each.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="max-w-full "
-            >
-              <div className="project-wrapper bg-light-navy  raise shadow-md p-4 lg:p-6">
+            <div className="max-w-full ">
+              <div className="project-wrapper bg-light-navy  raise shadow-md hover:shadow-lg p-4 lg:p-6">
                 <img
                   src={each.image}
                   alt="project"
@@ -26,10 +21,15 @@ function Work() {
 
                 <div className="lg:h-24 lg:h-20">
                   {/* <Divider /> */}
-                  <div className="max-w-full font-bold text-white">
+                  <a
+                    href={each.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="max-w-full font-bold my-2"
+                  >
                     {each.title}
-                  </div>
-                  <Divider className="text-slate" />
+                  </a>
+                  <Divider className="" />
                   <ul className="max-w-full ">
                     {each.stack.map((each) => (
                       <li className="text-xs inline-flex px-3 capitalize py-2 leading-lg text-slate">
@@ -39,7 +39,7 @@ function Work() {
                   </ul>
                 </div>
               </div>
-            </a>
+            </div>
           </div>
         ))}
       </div>

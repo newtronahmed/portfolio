@@ -34,7 +34,7 @@ export const experienceVariant = {
 		transition: {
 			when: 'beforeChildren',
 			staggerChildren: 0.05,
-			duration:1.05
+			duration: 1.05
 		}
 	}
 }
@@ -47,40 +47,40 @@ export const fadeVariant = {
 	}
 }
 export const socialLinksVariants = {
-	init:{
-		
-		transition:{
-			staggerChildren:1
+	init: {
+
+		transition: {
+			staggerChildren: 1
 		}
 	},
-	end:{
-		
-		transition:{
-			staggerChildren:0.2,
-			
+	end: {
+
+		transition: {
+			staggerChildren: 0.2,
+
 		}
 	}
 }
 export const socialLinks = {
-	init:{
-		y:0,
+	init: {
+		y: 0,
 	},
-	end:{
-		y:[0,-10,0],
-		transition:{
-			ease:'easeIn',
+	end: {
+		y: [0, -10, 0],
+		transition: {
+			ease: 'easeIn',
 			// duration:0.2,
-			yoyo:3,
+			yoyo: 3,
 		}
 	},
-	
+
 }
 
-const projectList = {
-	init:{
-		opacity:0,
+export const projectList = {
+	init: {
+		opacity: 0,
 	},
-	end:{
-		opacity:1,
+	end: {
+		opacity: 1,
 	}
 }

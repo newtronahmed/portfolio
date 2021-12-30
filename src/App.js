@@ -1,17 +1,17 @@
-import React, { useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
-import TwitterIcon from "@material-ui/icons/Twitter";
-import FacebookIcon from "@material-ui/icons/Facebook";
-import GitHubIcon from "@material-ui/icons/GitHub";
-import PhoneIcon from "@material-ui/icons/Phone";
-import LinkedIn from "@material-ui/icons/LinkedIn";
+import React from "react";
+// import { motion, useAnimation } from "framer-motion";
+// import TwitterIcon from "@material-ui/icons/Twitter";
+// import FacebookIcon from "@material-ui/icons/Facebook";
+// import GitHubIcon from "@material-ui/icons/GitHub";
+// import PhoneIcon from "@material-ui/icons/Phone";
+// import LinkedIn from "@material-ui/icons/LinkedIn";
 // import market from './images/market.png'
-import projects from "./projects";
-import portfolioSvg from "./images/portfolio.svg";
-import aboutMe from "./images/aboutMe.svg";
-import programmer from "./images/webdev.jpg";
-import Section from "./components/section";
-import frontend from "./images/frontend.svg";
+// import projects from "./projects";
+// import portfolioSvg from "./images/portfolio.svg";
+// import aboutMe from "./images/aboutMe.svg";
+// import programmer from "./images/webdev.jpg";
+// import Section from "./components/section";
+// import frontend from "./images/frontend.svg";
 // import WOW from "wowjs";
 
 import About from "./components/about";
@@ -19,19 +19,19 @@ import About from "./components/about";
 import Work from "./components/work";
 import Contact from "./components/contact";
 import Footer from "./components/footer";
-import { Divider } from "@material-ui/core";
-import { useInView } from "react-intersection-observer";
+// import { Divider } from "@material-ui/core";
+// import { useInView } from "react-intersection-observer";
 // import css from './images/css.png';
-import javascript from "./images/javascript.png";
-import laravel from "./images/laravel.png";
-import react from "./images/react.png";
-import mysql from "./images/mysql.png";
-import sass from "./images/sass.png";
-import nodejs from "./images/nodejs.png";
+// import javascript from "./images/javascript.png";
+// import laravel from "./images/laravel.png";
+// import react from "./images/react.png";
+// import mysql from "./images/mysql.png";
+// import sass from "./images/sass.png";
+// import nodejs from "./images/nodejs.png";
 
 // import Logo from '/assets/logo.svg'
 
-import Navbar from "./components/navbar";
+// import Navbar from "./components/navbar";
 import Welcome from "./components/welcome";
 import Services from "./components/services";
 
@@ -42,6 +42,7 @@ const App = () => {
   // 	}).init();
   // }, [])
   const [openNav, setOpenNav] = React.useState(false);
+  /*
   const controls = useAnimation();
   const { ref, inView } = useInView();
   useEffect(() => {
@@ -53,6 +54,7 @@ const App = () => {
     }
   }, [inView, controls]);
   const skills = [nodejs, javascript, laravel, react, mysql, sass];
+  */
   return (
     <div id="App">
       <Welcome openNav={openNav} setOpenNav={setOpenNav} />
@@ -67,20 +69,6 @@ const App = () => {
 };
 
 export default App;
-
-{
-  /* what i can do
-
-            Design What you want
-            develop what you need - fast and
-            help you to grow  -increase traffic*/
-}
-{
-  /*Works or Projects Section*/
-}
-{
-  /* <Section title="Projects Over the Years" svg={portfolioSvg} /> */
-}
 
 // Arrow down
 // {/* <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
