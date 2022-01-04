@@ -2,16 +2,16 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className="justify-center flex ">
-      <div className="">
-        <h2 className="text-xl font-bold mb-6 sm:text-center xl:text-left name">
+    <footer className=" ">
+      <div className="text-center">
+        <h2 className="text-2xl my-2 font-bold">
           Let's Get In Touch
         </h2>
-        <div className="footer-icons-wrapper flex text-sm  ">
+        <div className="footer-icons-wrapper flex justify-center text-sm  ">
           <a
             href="http://github.com/newtronahmed"
             target="_blank"
-            className="w-6 h-6 mx-2 "
+            className="w-5 h-5 mx-2 "
             rel="noopener noreferrer"
           >
             <svg
@@ -33,7 +33,7 @@ function Footer() {
             href="https://twitter.com/neutronahmed"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-6 h-6 mx-2 "
+            className="w-5 h-5 mx-2 "
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +53,7 @@ function Footer() {
           <a
             href="http://github.com/newtronahmed"
             target="_blank"
-            className="w-6 h-6 mx-2 "
+            className="w-5 h-5 mx-2 "
             rel="noopener noreferrer"
           >
             <svg
@@ -76,7 +76,7 @@ function Footer() {
           <a
             href="http://github.com/newtronahmed"
             target="_blank"
-            className="w-6 h-6  mx-2 "
+            className="w-5 h-5  mx-2 "
             rel="noopener noreferrer"
           >
             <svg
@@ -96,7 +96,7 @@ function Footer() {
           </a>
         </div>
         <div className="mt-2">
-          <div className="text-sm">
+          <div className="text-xs">
             Made By <a href="https://twitter.com/neutronahmed">@newtronahmed</a>{" "}
             , inspired by{" "}
             <a href="https://twitter.com/bchiang7">@Britanny Chang</a> ©

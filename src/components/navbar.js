@@ -52,6 +52,7 @@ function Navbar({ openNav, setOpenNav }) {
           </button>
         </div>
         <div className="hidden md:block nav-items ml-auto">
+          
           <ul className="flex">
             {navLinks.map((each) => {
               return (

@@ -7,8 +7,8 @@ function Services() {
         <h1 className="title">Services</h1>
       </div>
       <div className="container flex  w-full mx-auto md:flex-row flex-wrap">
-        <div className=" md:w-1/3  p-3 wow  slideInUp ">
-          <div className="shadow-md p-4 mx-2">
+        <div className=" md:w-1/3 p-3 wow  slideInUp ">
+          <div className="shadow-md p-4 mx-2 ">
             <div className="  bg-gray inline-flex designer-border p-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -26,9 +26,8 @@ function Services() {
               </svg>
             </div>
             <p className="mt-2">
-              Develop wide range of applications that's blazing fast and
-              captivating. Web Applications that are , responsive , easily
-              scalable , readable and reusable code etc.
+              Develop wide range of applications that's blazing fast . Web Applications that are , responsive , easily
+              scalable , elegant and reusable code etc.
             </p>
           </div>
         </div>
@@ -52,9 +51,9 @@ function Services() {
               </svg>
             </div>
             <p className="mt-2">
-              Do you want to customize your website design ? If yes then look no
+              Are you looking to redesign your site ? Then look no
               further. I can design your website with efficient tools and modern
-              design concepts that will amaze your site vistors.
+              design concepts that will astonish your site vistors.
             </p>
           </div>
         </div>

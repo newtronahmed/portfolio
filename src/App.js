@@ -1,3 +1,5 @@
+
+
 import React from "react";
 // import { motion, useAnimation } from "framer-motion";
 // import TwitterIcon from "@material-ui/icons/Twitter";
@@ -10,7 +12,7 @@ import React from "react";
 // import portfolioSvg from "./images/portfolio.svg";
 // import aboutMe from "./images/aboutMe.svg";
 // import programmer from "./images/webdev.jpg";
-// import Section from "./components/section";
+// import Section from "./components/section"*********;
 // import frontend from "./images/frontend.svg";
 // import WOW from "wowjs";
 

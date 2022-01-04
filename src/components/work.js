@@ -9,8 +9,8 @@ function Work() {
         <h1 className="title">Work</h1>
       </div>
       <div className="container flex md:justify-center w-full mx-auto md:flex-row flex-wrap    ">
-        {projects.map((each) => (
-          <div className="w-full   md:w-1/3 p-6 wow slideInUp h-auto">
+        {projects.map((each, i) => (
+          <div key={i} className="w-full   md:w-1/3 p-6 wow slideInUp h-auto">
             <div className="max-w-full ">
               <div className="project-wrapper bg-light-navy  raise shadow-md hover:shadow-lg p-4 lg:p-6">
                 <img

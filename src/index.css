@@ -53,6 +53,9 @@ section h1 {
   margin-bottom: 2rem;
   font-family: "Share Tech Mono", monospace;
 }
+section h1:hover {
+  color:var(--green);
+}
 .title:hover::after {
   width: 100%;
 }
@@ -67,7 +70,7 @@ section h1 {
   /* color:var(--white); */
   background-color: var(--green);
   bottom: -5px;
-  transition: all 500ms ease-in-out;
+  transition: all 400ms ease-in-out;
 }
 svg {
   color: var(--slate);
@@ -165,7 +168,7 @@ body {
   left: 0px;
   color: var(--green);
 }
-footer h2 {
+/* footer h2 {
   position: relative;
 }
 h2::after {
@@ -178,6 +181,9 @@ h2::after {
   left: 50%;
   bottom: -9px;
   transform: translateX(-50%);
+} */
+.ht-12{
+  height:12rem;
 }
 #banner {
   background: linear-gradient(
