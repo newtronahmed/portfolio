@@ -53,6 +53,12 @@ section h1 {
   margin-bottom: 2rem;
   font-family: "Share Tech Mono", monospace;
 }
+.relative {
+  position:relative;
+}
+.absolute {
+  position:absolute;
+}
 section h1:hover {
   color:var(--green);
 }
@@ -123,7 +129,9 @@ footer a:hover {
   margin-right: 0.5rem;
   cursor: pointer;
 }
-.drawer-container {
+
+.scrollToTop {
+  
 }
 
 html {

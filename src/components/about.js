@@ -20,7 +20,7 @@ function About() {
             web development concepts . I practice consistently hence I get better as day goes by.
             <br />
             <br />I have hands on experience in building complex react , laravel
-            and MERN stack applictions .
+            and MERN stack applications .
             <br />
             <br /> My most notable achievement is contributing to <a
               href="http://app.fayasms.com"
