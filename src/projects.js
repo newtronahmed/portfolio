@@ -17,7 +17,7 @@ const projects = [
     title: "Nextjs Ecommerce website + paypal integration",
     stack: ["nextjs", "material-ui", "paypal", "vercel"],
     image: ahmedzona,
-    link: "https://ahmedzona.herokuapp.com",
+    link: "https://ahmedzona.vercel.app",
   },
   {
     title: "React Commercejs Stripe Ecommerce Project",

@@ -1,5 +1,5 @@
 import React from "react";
-import programmer from "../images/webdev.jpg";
+// import programmer from "../images/webdev.jpg";
 function About() {
   return (
     <section id="about" className="">
@@ -31,7 +31,7 @@ function About() {
             </a> an sms platform during my internship.
             <br />
             <br />
-            When am not working , you'll catch me watching anime .
+            When am not working , you'll find me watching anime .
           </div>
         </div>
       </div>

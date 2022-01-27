@@ -58,20 +58,20 @@ const App = () => {
   const skills = [nodejs, javascript, laravel, react, mysql, sass];
   */
   return (
-    <div id="App relative">
+    <div id="App ">
       <Welcome openNav={openNav} setOpenNav={setOpenNav} />
       <About />
       <Services />
       <Work />
       <Contact />
       <Footer />
-      <div className="rounded-full  md:hidden scrollToTop bottom-0 right-0  px-4 py-4 bg-red-700 fixed text-center">
+      {/* <div className="rounded-full  md:hidden scrollToTop bottom-0 right-0  px-4 py-4 bg-red-700 fixed text-center">
         <a href="#app" rel="noopener noreferrer">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 17l-4 4m0 0l-4-4m4 4V3" />
           </svg>
         </a>
-      </div>
+      </div> */}
     </div>
   );
 };
