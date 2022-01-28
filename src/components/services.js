@@ -78,7 +78,7 @@ function Services() {
             </div>
             <p className="mt-2">
               Develop programs the best suits your customers. If you want to
-              boost your number of customers , or elevate your brand to a whole new level ,
+              grow the number of your customers , or elevate your brand to a whole new level ,
               Look no further.
             </p>
           </div>
