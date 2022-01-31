@@ -1,6 +1,6 @@
 import frontendMentor from "./images/frontend.jpg";
 import market from "./images/market.png";
-import robofriends from "./images/robofriends (1).png";
+import neutrohomes from "./images/neutro-homes.png";
 import ecommerce from "./images/ecommerce.png";
 import inventory from "./images/inventory.png";
 import yelpcamp from "./images/yelpcamp.png";
@@ -24,6 +24,13 @@ const projects = [
     stack: ["react", "redux", "material-ui", "stripe"],
     image: ecommerce,
     link: "http://newtro-ecommerce.netlify.app",
+  },
+  {
+    title: "Find Home Site",
+    stack: "Sass",
+    image : neutrohomes,
+    link: "http://neutro-homes.netlify.app"
+
   },
   {
     title: "React Laravel SPA + Laravel Sanctum Auth",
@@ -55,11 +62,6 @@ const projects = [
     image: frontendMentor,
     link: "http://newtrojoblisting.netlify.app",
   },
-  {
-    title: "Udemy React Robofriends App",
-    stack: ["react", "tacyons"],
-    image: robofriends,
-    link: "http://newtronahmed.netlify.app",
-  },
+  
 ];
 export default projects;
