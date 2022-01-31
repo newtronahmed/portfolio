@@ -27,7 +27,7 @@ const projects = [
   },
   {
     title: "Find Home Site",
-    stack: "Sass",
+    stack: ["Sass"],
     image : neutrohomes,
     link: "http://neutro-homes.netlify.app"
 
