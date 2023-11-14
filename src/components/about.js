@@ -11,8 +11,7 @@ function About() {
         <div className="">
           <div className="m-6 wow slideInRight text-center">
             Hello, I am Ahmed Zubairu , a mid-level professional{" "}
-            <strong>Web developer</strong> and a L400 student of the University
-            of Ghana reading Agricultural Economics . I am very passionate about
+            <strong>Web developer</strong>. I am very passionate about
             software development and I love spending time on complex problems.{" "}
             <br />
             <br />
