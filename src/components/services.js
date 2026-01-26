@@ -1,91 +1,89 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
-function Services() {
+const ServiceCard = ({ service, index }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 20 }}
+      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+      transition={{ delay: index * 0.1, duration: 0.5 }}
+      className="glass-card flex flex-col items-start"
+    >
+      <div className="text-green mb-6 p-3 designer-border">
+        {service.icon}
+      </div>
+      <h3 className="text-xl mb-4 text-white font-semibold">
+        {service.title}
+      </h3>
+      <p className="text-slate text-sm leading-relaxed">
+        {service.description}
+      </p>
+    </motion.div>
+  );
+};
+
+const Services = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const services = [
+    {
+      title: "Web Development",
+      description: "Building blazing fast, responsive, and scalable web applications using modern stacks like MERN and Laravel. Focused on clean, reusable code.",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+        </svg>
+      )
+    },
+    {
+      title: "UI/UX Design",
+      description: "Designing modern, eye-catching interfaces that delight users. Applying efficient tools and design concepts to elevate your brand's digital presence.",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+        </svg>
+      )
+    },
+    {
+      title: "Digital Growth",
+      description: "Developing solutions that suit your customers' needs, helping your brand grow and reach new heights in the digital economy.",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+        </svg>
+      )
+    }
+  ];
+
   return (
     <section id="services">
-      <div className="text-center">
-        <h1 className="title">Services</h1>
-      </div>
-      <div className="container flex  w-full mx-auto md:flex-row flex-wrap">
-        <div className=" md:w-1/3 p-3 wow  slideInUp ">
-          <div className="shadow-md p-4 mx-2 ">
-            <div className="  bg-gray inline-flex designer-border p-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-12 w-12"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-                />
-              </svg>
-            </div>
-            <p className="mt-2">
-              Develop wide range of applications that's blazing fast . Web Applications that are , responsive , easily
-              scalable , elegant and reusable code etc.
-            </p>
-          </div>
-        </div>
+      <motion.h1
+        ref={ref}
+        initial={{ opacity: 0, y: 20 }}
+        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+        transition={{ duration: 0.5 }}
+        className="title text-center"
+      >
+        What I Do
+      </motion.h1>
 
-        <div className=" md:w-1/3  p-3 wow  slideInUp ">
-          <div className="shadow-md p-4 mx-2">
-            <div className=" bg-gray inline-flex designer-border p-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-12 h-12"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
-                />
-              </svg>
-            </div>
-            <p className="mt-2">
-              Are you looking to redesign your site ? Then look no
-              further. I can design your website with efficient tools and modern
-              design concepts that will astonish your site vistors.
-            </p>
-          </div>
-        </div>
-
-        <div className=" md:w-1/3  p-3 wow  slideInUp ">
-          <div className="shadow-md p-4 mx-2">
-            <div className=" bg-gray designer-border inline-flex p-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-12 h-12"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
-                />
-              </svg>
-            </div>
-            <p className="mt-2">
-              Develop programs the best suits your customers. If you want to
-              grow the number of your customers , or elevate your brand to a whole new level ,
-              Look no further.
-            </p>
-          </div>
-        </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {services.map((service, i) => (
+          <ServiceCard key={i} service={service} index={i} />
+        ))}
       </div>
     </section>
   );
-}
+};
 
 export default Services;

@@ -34,40 +34,44 @@ function Welcome({ openNav, setOpenNav }) {
       variants={containerVariants}
       initial="init"
       animate="end"
-      id="banner"
+      className="relative overflow-hidden"
+      id="welcome"
     >
       <Navbar openNav={openNav} setOpenNav={setOpenNav} />
 
-      <div className="w-full hero min-h-screen wow bg-cover bg-center name ">
-        <div className="text-center">
-          <motion.div variants={childrenVariant} className=" px-4  wow">
-            Hi, I am
+      <div className="w-full min-h-screen flex items-center justify-center px-4 md:px-20">
+        <div className="max-w-4xl w-full">
+          <motion.div variants={childrenVariant} className="name mb-4 text-lg">
+            Hi, my name is
           </motion.div>
 
-          <motion.div variants={childrenVariant} className="">
-            <div className="heroTextXL lg:bg-transparent inline-block  px-4  font-boldest">
-              Ahmed
-            </div>
+          <motion.div variants={childrenVariant} className="mb-2">
+            <h1 className="heroTextXL">
+              Ahmed Zubairu.
+            </h1>
           </motion.div>
-          <motion.div variants={childrenVariant}>
-            <div className="heroTextXL  px-4  inline-block font-boldest    ">
-              Zubairu
-            </div>
+
+          <motion.div variants={childrenVariant} className="mb-6">
+            <h2 className="heroTextL">
+              I build things for the web.
+            </h2>
           </motion.div>
-          <motion.div variants={childrenVariant} className="md:text-3xl p-4">
-            <div className="  md:text-2xl p-2 ">I am a Developer</div>
+
+          <motion.div variants={childrenVariant} className="max-w-lg mb-10 text-slate text-lg">
+            I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products.
           </motion.div>
-          <motion.div variants={childrenVariant} className="p-4 inline-flex ">
+
+          <motion.div variants={childrenVariant} className="flex flex-wrap gap-4">
             <a
               href="/assets/resume.pdf"
               target="_blank"
               download
-              className="rounded p-2 text-white flex items-center "
+              className="btn-primary flex items-center gap-2"
             >
-              RESUME
+              Check out my resume
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
+                className="h-5 w-5"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -84,132 +88,48 @@ function Welcome({ openNav, setOpenNav }) {
         </div>
       </div>
       <aside
-        className={`nav-list py-2 px-2 items-center bg-navy ${
-          openNav ? "nav-list-active" : ""
-        }`}
+        className={`nav-list fixed top-0 right-0 h-full w-full max-w-sm z-[100] flex flex-col items-center justify-center p-10 transition-all duration-300 transform ${openNav ? "translate-x-0" : "translate-x-full"
+          }`}
       >
-        <div className="ml-auto">
-          <button className="py-1 px-1" onClick={() => setOpenNav(false)}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </button>
-        </div>
-        <div className="footer-icons-wrapper flex justify-center text-sm my-2  ">
-          <a
-            href="http://github.com/newtronahmed"
-            target="_blank"
-            className="w-5 h-5 mx-2 "
-            rel="noopener noreferrer"
+        <button
+          className="absolute top-8 right-10 text-green"
+          onClick={() => setOpenNav(false)}
+          aria-label="Close Menu"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-10 w-10"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
+            <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              class="feather feather-github"
-            >
-              <title>GitHub</title>
-              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-            </svg>
-          </a>
-          <a
-            href="https://twitter.com/neutronahmed"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-5 h-5 mx-2 "
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="feather feather-twitter"
-            >
-              <title>Twitter</title>
-              <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-            </svg>
-          </a>
-          <a
-            href="http://github.com/newtronahmed"
-            target="_blank"
-            className="w-5 h-5 mx-2 "
-            rel="noopener noreferrer"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="feather feather-linkedin"
-            >
-              <title>LinkedIn</title>
-              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-              <rect x="2" y="9" width="4" height="12"></rect>
-              <circle cx="4" cy="4" r="2"></circle>
-            </svg>
-          </a>
-          <a
-            href="http://github.com/newtronahmed"
-            target="_blank"
-            className="w-5 h-5  mx-2 "
-            rel="noopener noreferrer"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="feather feather-github"
-            >
-              <title>GitHub</title>
-              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-            </svg>
-          </a>
-        </div>
-        <ul className=" flex flex-col">
-          {navLinks.map((each) => {
-            return (
-              <li className="name py-2 my-2 side-nav">
-                <a
-                  href={each.path}
-                  // className="nav-list-item"
-                  onClick={() => setOpenNav(false)}
-                  rel="noopener noreferrer"
-                >
-                  {each.title}
-                </a>
-              </li>
-            );
-          })}
+              strokeWidth={2}
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+
+        <ul className="flex flex-col gap-8 text-center list-none p-0 m-0 mb-12">
+          {navLinks.map((link, i) => (
+            <li key={i} className="font-mono text-lg">
+              <a
+                href={link.path}
+                className="flex flex-col gap-1 items-center hover:text-green transition-colors"
+                onClick={() => setOpenNav(false)}
+              >
+                <span className="text-green text-sm">0{i + 1}.</span>
+                <span className="text-lightest-slate text-2xl">{link.title}</span>
+              </a>
+            </li>
+          ))}
         </ul>
+
+        <a href="/assets/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn-primary w-full text-center">
+          Resume
+        </a>
       </aside>
     </motion.div>
   );
