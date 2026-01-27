@@ -5,6 +5,7 @@ import Welcome from "./components/welcome";
 import About from "./components/about";
 import Services from "./components/services";
 import Work from "./components/work";
+import Blog from "./components/blog";
 import Contact from "./components/contact";
 import Footer from "./components/footer";
 
@@ -18,6 +19,7 @@ const App = () => {
         <About />
         <Services />
         <Work />
+        <Blog />
         <Contact />
       </main>
       <Footer />

@@ -15,7 +15,8 @@ const Navbar = ({ openNav, setOpenNav }) => {
     { path: "#about", title: "About", id: "01." },
     { path: "#services", title: "Services", id: "02." },
     { path: "#work", title: "Work", id: "03." },
-    { path: "#contact", title: "Contact", id: "04." },
+    { path: "#blog", title: "Blog", id: "04." },
+    { path: "#contact", title: "Contact", id: "05." },
   ];
 
   return (

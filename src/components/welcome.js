@@ -1,34 +1,21 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Typed from "react-typed";
 import Navbar from "./navbar";
 import {
   containerVariants,
   childrenVariant,
-  // experienceVariant,
-  // socialLinksVariants,
-  // fadeVariant,
-  // socialLinks,
-  // projectList,
 } from "../utilities/motion";
+
 function Welcome({ openNav, setOpenNav }) {
   const navLinks = [
-    {
-      path: "#about",
-      title: "About",
-    },
-    {
-      path: "#services",
-      title: "Services",
-    },
-    {
-      path: "#work",
-      title: "Work",
-    },
-    {
-      path: "#contact",
-      title: "Contact",
-    },
+    { path: "#about", title: "About" },
+    { path: "#services", title: "Services" },
+    { path: "#work", title: "Work" },
+    { path: "#blog", title: "Blog" },
+    { path: "#contact", title: "Contact" },
   ];
+
   return (
     <motion.div
       variants={containerVariants}
@@ -52,8 +39,16 @@ function Welcome({ openNav, setOpenNav }) {
           </motion.div>
 
           <motion.div variants={childrenVariant} className="mb-6">
-            <h2 className="heroTextL">
-              I build things for the web.
+            <h2 className="heroTextL flex flex-wrap items-center gap-x-3">
+              I build things for the{" "}
+              <span className="text-green">
+                <Typed
+                  strings={["web.", "mobile.", "desktop."]}
+                  typeSpeed={80}
+                  backSpeed={50}
+                  loop
+                />
+              </span>
             </h2>
           </motion.div>
 

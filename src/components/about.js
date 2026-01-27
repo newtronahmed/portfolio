@@ -7,15 +7,12 @@ const About = () => {
   const { ref: contentRef, inView: contentInView } = useInView({ triggerOnce: true, threshold: 0.1 });
   const { ref: skillsRef, inView: skillsInView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
-  const skills = [
-    "JavaScript (ES6+)",
-    "TypeScript",
-    "React",
-    "Node.js",
-    "Laravel",
-    "Express.js",
-    "MongoDB",
-    "Tailwind CSS",
+  const skillCategories = [
+    { name: "Frontend", items: ['TypeScript', 'React', 'Next.js', 'Redux'] },
+    { name: "Backend", items: ['Node.js', 'Express', 'Laravel', 'FastAPI', 'Spring Boot', '.NET'] },
+    { name: "Databases", items: ['MySQL', 'MongoDB', 'PostgreSQL', 'Cosmos DB', 'Firebase', 'Pinecone DB'] },
+    { name: "Tools", items: ['Git', 'Vim', 'Linux', 'Redux RTK'] },
+    { name: "Focus", items: ['Microservices', 'DevOps', 'Cloud Computing'] }
   ];
 
   return (
@@ -30,27 +27,24 @@ const About = () => {
         About Me
       </motion.h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
         <motion.div
           ref={contentRef}
           initial={{ opacity: 0, x: -20 }}
           animate={contentInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
           transition={{ duration: 0.5 }}
+          className="lg:col-span-3"
         >
-          <p className="mb-4">
-            Hello! My name is Ahmed Zubairu, and I enjoy creating things that live on the internet. My interest in web development started back in 2019 when I decided to try editing custom templates — turns out hacking together a simple custom button taught me a lot about HTML & CSS!
+          <p className="mb-4 text-lg text-white">
+            I’m a full-stack software engineer focused on building scalable, production-ready web applications. I work across the frontend and backend, with experience designing clean APIs, managing data flows, and building maintainable UI components.
           </p>
 
           <p className="mb-4 text-slate">
-            Fast-forward to today, and I’ve had the privilege of working at an internship, where my most notable achievement was contributing to <a href="http://app.fayasms.com" target="_blank" rel="noopener noreferrer">Fayasms</a>, a large-scale SMS platform.
-          </p>
-
-          <p className="mb-4 text-slate">
-            My main focus these days is building accessible, inclusive products and digital experiences at scale.
+            I’ve worked with React and Next.js on the frontend, and Expressjs, Spring Boot and Laravel on the backend, building systems that handle real users, real data, and real constraints. I care deeply about code quality, performance, and writing software that’s easy to extend and maintain.
           </p>
 
           <p className="text-slate italic">
-            When I’m not at the computer, I’m usually watching anime or exploring new technologies.
+            When I’m not at the computer, I’m usually exploring new technologies or tackling complex architectural challenges.
           </p>
         </motion.div>
 
@@ -59,17 +53,23 @@ const About = () => {
           initial={{ opacity: 0, x: 20 }}
           animate={skillsInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
           transition={{ duration: 0.5 }}
-          className="glass-card"
+          className="lg:col-span-2 glass-card"
         >
-          <h3 className="text-white mb-6 text-xl">Technologies I’ve been working with:</h3>
-          <ul className="grid grid-cols-2 gap-2 font-mono text-sm group">
-            {skills.map((skill, i) => (
-              <li key={i} className="flex items-center gap-2 text-slate hover:text-green transition-colors">
-                <span className="text-green text-xs">▹</span>
-                {skill}
-              </li>
+          <h3 className="text-white mb-6 text-xl">Technical Toolkit</h3>
+          <div className="space-y-6">
+            {skillCategories.map((category, idx) => (
+              <div key={idx}>
+                <h4 className="text-green font-mono text-xs uppercase tracking-widest mb-2">{category.name}</h4>
+                <ul className="flex flex-wrap gap-2">
+                  {category.items.map((skill, i) => (
+                    <li key={i} className="text-xs bg-lightest-navy text-light-slate px-2 py-1 rounded border border-glass-border hover:border-green hover:text-green transition-colors cursor-default">
+                      {skill}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
-          </ul>
+          </div>
         </motion.div>
       </div>
     </section>

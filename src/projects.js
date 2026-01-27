@@ -5,7 +5,36 @@ import ecommerce from "./images/ecommerce.png";
 import inventory from "./images/inventory.png";
 import yelpcamp from "./images/yelpcamp.png";
 import ahmedzona from "./images/ahmedzona.png";
+import vaspGhana from "./images/vaspa-ghana.png";
+import trainingCenter from "./images/training-center.png";
+import hotjobsAfrica from "./images/hotjobs-africa.png";
+import meloTechnologies from "./images/Melo-technologies.png";
+
 const projects = [
+  {
+    title: "Vasp Ghana",
+    stack: ["Next.js", "Tailwind CSS"],
+    image: vaspGhana,
+    link: "https://vaspghana.com",
+  },
+  {
+    title: "Training Center",
+    stack: ["React", "Mantine UI"],
+    image: trainingCenter,
+    link: "https://training-center-ahmed.vercel.app",
+  },
+  {
+    title: "Hotjobs Africa",
+    stack: ["Laravel", "Botble CMS", "Paystack"],
+    image: hotjobsAfrica,
+    link: "https://hotjobsafrica.com",
+  },
+  {
+    title: "Melo Technologies",
+    stack: ["Next.js", "Redux Toolkit"],
+    image: meloTechnologies,
+    link: "https://melotechnologies.com",
+  },
   {
     title: "Laravel React Inventory Manager",
     stack: ["laravel", "react", "redux"],
@@ -28,7 +57,7 @@ const projects = [
   {
     title: "Find Home Site",
     stack: ["Sass"],
-    image : neutrohomes,
+    image: neutrohomes,
     link: "http://neutro-homes.netlify.app"
 
   },
@@ -62,6 +91,6 @@ const projects = [
     image: frontendMentor,
     link: "http://newtrojoblisting.netlify.app",
   },
-  
+
 ];
 export default projects;
