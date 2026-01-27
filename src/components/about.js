@@ -10,6 +10,7 @@ const About = () => {
   const skillCategories = [
     { name: "Frontend", items: ['TypeScript', 'React', 'Next.js', 'Redux'] },
     { name: "Backend", items: ['Node.js', 'Express', 'Laravel', 'FastAPI', 'Spring Boot', '.NET'] },
+    { name: "AI & Automation", items: ['RAG APIs', 'n8n', 'Pipedream', 'Chatbots', 'OpenAI'] },
     { name: "Databases", items: ['MySQL', 'MongoDB', 'PostgreSQL', 'Cosmos DB', 'Firebase', 'Pinecone DB'] },
     { name: "Tools", items: ['Git', 'Vim', 'Linux', 'Redux RTK'] },
     { name: "Focus", items: ['Microservices', 'DevOps', 'Cloud Computing'] }

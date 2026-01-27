@@ -9,8 +9,15 @@ import vaspGhana from "./images/vaspa-ghana.png";
 import trainingCenter from "./images/training-center.png";
 import hotjobsAfrica from "./images/hotjobs-africa.png";
 import meloTechnologies from "./images/Melo-technologies.png";
+import chatPdf from "./images/chat-pdf.png";
 
 const projects = [
+  {
+    title: "Chat PDF",
+    stack: ["Next.js", "OpenAI", "Pinecone DB", "Clerk"],
+    image: chatPdf,
+    link: "https://chat-pdf-ahmed.vercel.app",
+  },
   {
     title: "Vasp Ghana",
     stack: ["Next.js", "Tailwind CSS"],

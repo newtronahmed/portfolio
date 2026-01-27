@@ -43,7 +43,7 @@ function Welcome({ openNav, setOpenNav }) {
               I build things for the{" "}
               <span className="text-green">
                 <Typed
-                  strings={["web.", "mobile.", "desktop."]}
+                  strings={["mobile.", "web.", "desktop."]}
                   typeSpeed={80}
                   backSpeed={50}
                   loop

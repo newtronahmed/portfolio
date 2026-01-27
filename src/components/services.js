@@ -55,11 +55,11 @@ const Services = () => {
       )
     },
     {
-      title: "Digital Growth",
-      description: "Developing solutions that suit your customers' needs, helping your brand grow and reach new heights in the digital economy.",
+      title: "AI & Automation",
+      description: "Building intelligent RAG-powered APIs, custom chatbots, and AI-enabled applications. Automating complex workflows using n8n and Pipedream.",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
       )
     }
@@ -77,7 +77,7 @@ const Services = () => {
         What I Do
       </motion.h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {services.map((service, i) => (
           <ServiceCard key={i} service={service} index={i} />
         ))}
