@@ -20,9 +20,9 @@ const projects = [
   },
   {
     title: "Vasp Ghana",
-    stack: ["Next.js", "Tailwind CSS"],
+    stack: ["Next.js", "Tailwind CSS", "Vercel"],
     image: vaspGhana,
-    link: "https://vaspghana.com",
+    link: "https://vasp-staging.newtronahmed.workers.dev/events",
   },
   {
     title: "Training Center",
@@ -34,13 +34,13 @@ const projects = [
     title: "Hotjobs Africa",
     stack: ["Laravel", "Botble CMS", "Paystack"],
     image: hotjobsAfrica,
-    link: "https://hotjobsafrica.com",
+    link: "https://hotjobsafrica.org",
   },
   {
     title: "Melo Technologies",
     stack: ["Next.js", "Redux Toolkit"],
     image: meloTechnologies,
-    link: "https://melotechnologies.com",
+    link: "https://melo.global",
   },
   {
     title: "Laravel React Inventory Manager",
